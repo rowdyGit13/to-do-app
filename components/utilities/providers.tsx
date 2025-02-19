@@ -1,9 +1,15 @@
 "use client";
 
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { ThemeProvider as NextThemesProvider, ThemeProviderProps } from "next-themes";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { type ReactNode } from "react";
 
-export const Providers = ({ children, ...props }: ThemeProviderProps) => {
+interface ProvidersProps {
+  children: ReactNode;
+  [key: string]: any;
+}
+
+export const Providers = ({ children, ...props }: ProvidersProps) => {
   return (
     <NextThemesProvider {...props}>
       <TooltipProvider>{children}</TooltipProvider>
