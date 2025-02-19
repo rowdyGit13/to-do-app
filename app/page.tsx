@@ -1,23 +1,12 @@
-"use client";
-
-import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
-  const [randomNumber, setRandomNumber] = useState(0);
-
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <div>
-          <h1>Hello World</h1>
-          {/* Add a button that acts as a random number generator   */}
-          <button onClick={() => {
-            const randomNumber = Math.floor(Math.random() * 100);
-            setRandomNumber(randomNumber);
-          }}>Generate Random Number</button>
-          <p>Random Number: {randomNumber}</p>
-        </div>
-      </main>
+    <div>
+      <h1>Home Page</h1>
+      <Button variant="outline" size="lg">
+        Click me
+      </Button>
     </div>
   );
 }
