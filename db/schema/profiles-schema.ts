@@ -17,5 +17,5 @@ export const profilesTable = pgTable("profiles", {
 });
 
 //good example of using drizzle for easy access of db from frontend
-export type InsertProfile = typeof profilesTable.$inferInsert;
-export type SelectProfile = typeof profilesTable.$inferSelect;
+export type InsertProfile = typeof profilesTable.$inferInsert; //for creating a new profile
+export type SelectProfile = typeof profilesTable.$inferSelect; //for fetching a single profile

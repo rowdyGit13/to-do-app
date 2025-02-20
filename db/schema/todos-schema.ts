@@ -17,5 +17,5 @@ export const todosTable = pgTable("todos", {
     .$onUpdate(() => new Date())
 });
 
-export type InsertTodo = typeof todosTable.$inferInsert;
-export type SelectTodo = typeof todosTable.$inferSelect;
+export type InsertTodo = typeof todosTable.$inferInsert; //for creating a new todo
+export type SelectTodo = typeof todosTable.$inferSelect; //for fetching a single todo
