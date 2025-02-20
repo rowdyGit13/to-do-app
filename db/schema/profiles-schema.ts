@@ -1,3 +1,4 @@
+//define data structure for our profiles table
 import { pgEnum, pgTable, text, timestamp } from "drizzle-orm/pg-core";
 
 export const membershipEnum = pgEnum("membership", ["free", "pro"]);
@@ -15,6 +16,6 @@ export const profilesTable = pgTable("profiles", {
     .$onUpdate(() => new Date())
 });
 
-//good example of using drizzle to create types for our table
+//good example of using drizzle for easy access of db from frontend
 export type InsertProfile = typeof profilesTable.$inferInsert;
 export type SelectProfile = typeof profilesTable.$inferSelect;

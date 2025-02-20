@@ -8,6 +8,6 @@ export default defineConfig({
   out: "./db/migrations",
   dialect: "postgresql", //tells drizzle what language we are using
   dbCredentials: {
-    url: process.env.DATABASE_URL! //environmental variable from vercel gets injected here securely
+    url: process.env.DATABASE_URL! //allows us to inject environmental variable securely while comitting this file to git
   }
 });
