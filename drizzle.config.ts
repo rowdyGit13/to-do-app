@@ -1,15 +1,13 @@
-import { config as dotenvConfig } from "dotenv";
-import { DrizzleConfig } from "drizzle-kit";
+import { config } from "dotenv";
+import { defineConfig } from "drizzle-kit";
 
-dotenvConfig({ path: ".env.local" });
+config({ path: ".env.local" });
 
-const config: DrizzleConfig = {
+export default defineConfig({
   schema: "./db/schema/index.ts",
   out: "./db/migrations",
-  dialect: "postgresql", //tells drizzle what language we are using
+  dialect: "postgresql",
   dbCredentials: {
-    url: process.env.DATABASE_URL! //allows us to inject environmental variable securely while comitting this file to git
+    url: process.env.DATABASE_URL!
   }
-};
-
-export default config;
+});
