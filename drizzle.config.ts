@@ -1,7 +1,7 @@
-import { config } from "dotenv";
+import { config as dotenvConfig } from "dotenv";
 import { DrizzleConfig } from "drizzle-kit";
 
-config({ path: ".env.local" });
+dotenvConfig({ path: ".env.local" });
 
 const config: DrizzleConfig = {
   schema: "./db/schema/index.ts",
