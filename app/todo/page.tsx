@@ -8,17 +8,17 @@ export default async function TodoPage() {
   const { userId } = auth();
 
   if (!userId) {
-    return redirect("/login");
+    return redirect("/auth/login");
   }
 
   const profile = await getProfileByUserId(userId);
 
   if (!profile) {
-    return redirect("/signup");
+    return redirect("/auth/signup");
   }
 
   if (profile.membership === "free") {
-    return redirect("/pricing");
+    return redirect("/marketing/pricing");
   }
 
   const todos = await getTodos(userId);

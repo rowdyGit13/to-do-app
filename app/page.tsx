@@ -20,12 +20,12 @@ export default function Home() {
       </div>
       
       <div className="flex gap-4">
-        <Link href="/login">
+        <Link href="/auth/login">
           <Button variant="default" size="lg">
             Login
           </Button>
         </Link>
-        <Link href="/signup">
+        <Link href="/auth/signup">
           <Button variant="outline" size="lg">
             Sign Up
           </Button>
