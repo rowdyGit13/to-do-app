@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Todo App - Home",
+  title: "Todo App - Homepage",
   description: "Welcome to the Todo App - Get Started",
 };
 
